@@ -1,0 +1,122 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  background-image: url("./assets/apple-cat.gif");
+}
+
+#app {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+#app::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(69, 69, 69, 0.8); 
+  z-index: -1;
+}
+
+
+#blackbox {
+  display: flex;
+  border: none;
+  border-radius: 0px;
+  background-color: black;
+  height: 20px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity 1s ease;
+}
+
+#blackbox:hover {
+  opacity: 0.5;
+}
+
+#blackbox * {
+  text-align: center;
+  font-size: clamp(8px, 3vw, 14px);
+}
+
+.title {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  height: auto;
+  width: 100vw;
+  top: 100px;
+}
+
+#websites_container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  height: 600px;
+  width: 100vw;
+  top: 200px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  min-width: 100px;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  transition: background-color 0.5s ease;
+
+  flex-wrap: wrap;
+}
+
+.container * {
+  transition: color 0.5s ease;
+}
+
+.container:hover {
+  background-color: white;
+  color: black;
+}
+
+.container:hover * {
+  color: black;
+}
+
+button {
+  width: 100%;
+  background-color: orange;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  font: large;
+}
+
+.bottom_a_hrefs{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: end;
+}
